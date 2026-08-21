@@ -1,0 +1,31 @@
+EDA
+ │
+ ├── Problem definition
+ │
+ ├── Target definition
+ │
+ ├── Features
+ │
+ ├── Missing Values
+ │
+ ├── Categories
+ │
+ ├── Train/Test Split
+ │
+ ├── Baseline
+ │      └── Linear Regression
+ │
+ ├── comparasion models
+ │      ├── Ridge
+ │      ├── Lasso
+ │      ├── Random Forest
+ │      ├── Gradient Boosting
+ │      └── XGBoost
+ │
+ ├── Cross Validation
+ │
+ ├── Hyperparameter Tuning
+ │
+ ├── Metrics comparasion
+ │
+ └── Final model decision
