@@ -16,7 +16,8 @@ EDA (ok)
  ├── Baseline (ok)
  │      └── Linear Regression
  │
- ├── Causal inference analysis
+ ├── Causal inference analysis (ok)
+        └── Considering the hours_studied variable
  │
  ├── Comparasion models
  │      ├── Tree
