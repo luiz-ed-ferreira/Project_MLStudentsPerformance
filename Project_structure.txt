@@ -17,7 +17,7 @@ EDA (ok)
  │      └── Linear Regression
  │
  ├── Causal inference analysis (ok)
-        └── Considering the hours_studied variable
+        └── Considering the hours_studied and Tutoring_sessions variables
  │
  ├── Comparasion models
  │      ├── Tree
