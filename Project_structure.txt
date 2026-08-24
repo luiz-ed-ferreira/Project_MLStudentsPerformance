@@ -1,19 +1,22 @@
-EDA
+EDA (ok)
  │
- ├── Problem definition -> Students Performance
+ ├── Problem definition -> Students Performance (ok)
  │
- ├── Target definition -> Exam Score forecast
+ ├── Target definition -> Exam Score forecast (ok)
  │
- ├── Features
+ ├── Features definition (ok)
  │
- ├── Missing Values
+ ├── Missing Values treatment (ok)
  │
- ├── Categories -> One-Hot encoding
+ ├── Categories -> One-Hot encoding (ok)
  │
- ├── Train/Test Split
+ ├── Training/Test Split (ok)
+ │      └── 80% Training / 20% test
  │
- ├── Baseline
+ ├── Baseline (ok)
  │      └── Linear Regression
+ │
+ ├── Causal inference analysis
  │
  ├── Comparasion models
  │      ├── Tree
