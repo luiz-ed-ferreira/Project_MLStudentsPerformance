@@ -1,27 +1,25 @@
 EDA
  │
- ├── Problem definition
+ ├── Problem definition -> Students Performance
  │
- ├── Target definition
+ ├── Target definition -> Exam Score forecast
  │
  ├── Features
  │
  ├── Missing Values
  │
- ├── Categories
+ ├── Categories -> One-Hot encoding
  │
  ├── Train/Test Split
  │
  ├── Baseline
  │      └── Linear Regression
  │
- ├── comparasion models
- │      ├── Ridge
- │      ├── Lasso
- │      ├── Random Forest
- │      ├── Gradient Boosting
- │      └── XGBoost
- │
+ ├── Comparasion models
+ │      ├── Tree
+ │      ├── Generic algorithm
+ │      └── Neural Network
+ │   
  ├── Cross Validation
  │
  ├── Hyperparameter Tuning
