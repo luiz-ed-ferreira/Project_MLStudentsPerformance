@@ -21,7 +21,7 @@ EDA (ok)
  │
  ├── Comparasion models
  │      ├── Tree
- │      ├── Generic algorithm
+ │      ├── Genetic algorithm
  │      └── Neural Network
  │   
  ├── Cross Validation
