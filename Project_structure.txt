@@ -28,6 +28,6 @@ EDA (ok)
  │
  ├── Hyperparameter Tuning
  │
- ├── Metrics comparasion
+ ├── Metrics comparison
  │
  └── Final model decision
