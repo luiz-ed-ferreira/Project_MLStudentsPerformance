@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Transformed dataset (from EDA)
+#Transformed dataset (from EDA)
 #Students performance factors for model dataset
 student_performance_factors_for_model = pd.read_csv('../Dataset/student_performance_factors_for_model.csv')
 
