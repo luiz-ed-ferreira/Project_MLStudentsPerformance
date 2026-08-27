@@ -1,3 +1,5 @@
+## Project Data Sciense Structure
+
 EDA (ok)
  │
  ├── Problem definition -> Students Performance (ok)
@@ -17,17 +19,24 @@ EDA (ok)
  │      └── Linear Regression
  │
  ├── Causal inference analysis (ok)
-        └── Considering the Hours_Studied and Tutoring_Sessions variables
+ │      └── Considering the Hours_Studied and Tutoring_Sessions variables
  │
  ├── Comparasion models
  │      ├── Tree
  │      ├── Genetic algorithm
  │      └── Neural Network
  │   
- ├── Cross Validation
+ ├── Cross Validation With Baseline
  │
- ├── Hyperparameter Tuning
+ ├── Hyperparameter Tuning (comparison models)
+ │      ├── Tree 
+ │      ├── Genetic algorithm
+ │      └── Neural Network
  │
- ├── Metrics comparison
+ ├── Metrics final comparison
  │
  └── Final model decision
+
+------------------------------------------------------------------------
+
+ ## Project Airflow Structure
