@@ -22,14 +22,14 @@ EDA (ok)
  │      └── Considering the Hours_Studied and Tutoring_Sessions variables
  │
  ├── Comparasion models
- │      ├── Tree
+ │      ├── Tree (ok)
  │      ├── Genetic algorithm
  │      └── Neural Network
  │   
  ├── Cross Validation With Baseline
  │
  ├── Hyperparameter Tuning (comparison models)
- │      ├── Tree 
+ │      ├── Tree (ok)
  │      ├── Genetic algorithm
  │      └── Neural Network
  │
