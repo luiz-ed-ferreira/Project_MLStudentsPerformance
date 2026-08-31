@@ -1,41 +1,44 @@
-## Project Data Sciense Structure
+## Project Data Science Structure
 
-EDA (ok)
+ o EDA (ok)
  │
- ├── Problem definition -> Students Performance (ok)
+ ├── Problem definition -> Students performance (ok)
  │
- ├── Target definition -> Exam Score forecast (ok)
+ ├── Target definition -> Exam score forecast (ok)
  │
  ├── Features definition (ok)
  │
- ├── Missing Values treatment (ok)
+ ├── Missing values treatment (ok)
  │
- ├── Categories -> One-Hot encoding (ok)
+ ├── Categories treatment -> One-Hot encoding (ok)
  │
  ├── Training/Test Split (ok)
  │      └── 80% Training / 20% test
  │
- ├── Baseline (ok)
+ ├── Baseline definition (ok)
  │      └── Linear Regression
  │
  ├── Causal inference analysis (ok)
  │      └── Considering the Hours_Studied and Tutoring_Sessions variables
  │
  ├── Comparasion models
- │      ├── Tree (ok)
- │      ├── Genetic algorithm
- │      └── Neural Network
- │   
- ├── Cross Validation With Baseline
+ │      ├── Regression (ok)
+ │      │   └── Tree (ok)
+ │      └── Optimization
+ │          ├── Genetic algorithm
+ │          └── Neural Network
  │
- ├── Hyperparameter Tuning (comparison models)
+ ├── Hyperparameter tuning of comparison models (if necessary)
  │      ├── Tree (ok)
  │      ├── Genetic algorithm
  │      └── Neural Network
+ │
+ ├── Cross-validation of metrics for the analyzed models
  │
  ├── Metrics final comparison
+ │      └── Streamlit visualization
  │
- └── Final model decision
+ o Final model decision (best forecast)
 
 ------------------------------------------------------------------------
 
