@@ -13,7 +13,7 @@
  ├── Categories treatment -> One-Hot encoding (ok)
  │
  ├── Training/Test Split (ok)
- │      └── 80% Training / 20% test
+ │      └── 80% training / 20% test
  │
  ├── Baseline definition (ok)
  │      └── Linear Regression
@@ -26,12 +26,12 @@
  │      │   └── Tree (ok)
  │      └── Optimization
  │          ├── Genetic algorithm
- │          └── Neural Network
+ │          └── Neural network
  │
  ├── Hyperparameter tuning of comparison models (if necessary)
  │      ├── Tree (ok)
  │      ├── Genetic algorithm
- │      └── Neural Network
+ │      └── Neural network
  │
  ├── Cross-validation of metrics for the analyzed models
  │
@@ -43,3 +43,5 @@
 ------------------------------------------------------------------------
 
  ## Project Airflow Structure
+
+ o TBD
