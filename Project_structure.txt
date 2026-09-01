@@ -24,10 +24,10 @@
  │
  ├── Comparasion models
  │      ├── Regression (ok)
- │      │   └── Tree (ok)
+ │      │   ├── Tree (ok)
+ │      │   └── Neural network
  │      └── Optimization
- │          ├── Genetic algorithm (ok)
- │          └── Neural network
+ │          └── Genetic algorithm (ok)
  │
  ├── Hyperparameter tuning of comparison models (if necessary)
  │      ├── Tree (ok)
