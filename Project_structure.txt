@@ -5,15 +5,16 @@
  ├── Problem definition -> Students performance (ok)
  │
  ├── Target definition -> Exam score forecast (ok)
- │
- ├── Features definition (ok)
- │
+ |
  ├── Missing values treatment (ok)
  │
  ├── Categories treatment -> One-Hot encoding (ok)
  │
+ ├── Features definition (ok)
+ │      └── 40 features (34 are categorical and 6 go straight through)
+ │
  ├── Training/Test Split (ok)
- │      └── 80% training / 20% test
+ │      └── 80% training / 20% test (standard definition)
  │
  ├── Baseline definition (ok)
  │      └── Linear Regression
