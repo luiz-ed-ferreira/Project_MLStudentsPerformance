@@ -26,12 +26,12 @@
  │      ├── Regression (ok)
  │      │   └── Tree (ok)
  │      └── Optimization
- │          ├── Genetic algorithm
+ │          ├── Genetic algorithm (ok)
  │          └── Neural network
  │
  ├── Hyperparameter tuning of comparison models (if necessary)
  │      ├── Tree (ok)
- │      ├── Genetic algorithm
+ │      ├── Genetic algorithm (not necessary)
  │      └── Neural network
  │
  ├── Cross-validation of metrics for the analyzed models
