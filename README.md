@@ -19,7 +19,47 @@ In progress [developing]
 
 > Attention! Consult the Project_structure.txt file for more information on the project pipeline.
 
-### Results
+### Model analyses
+
+#### Objective
+
+> The main objective is to predict students' Exam Score based on academic, behavioral, and demographic factors.
+
+> The project also evaluates different Machine Learning approaches to answer: Which model provides the best predictive performance while maintaining an appropriate level of complexity?
+
+#### Dataset
+
+> The dataset contains 6,606 student observations and variables related to students' academic performance and personal habits (kaggle sample dataset).
+
+- Target Variable
+> Exam_Score
+
+- Main Features
+
+> Numerical:
+>- Hours_Studied
+>- Attendance
+>- Sleep_Hours
+>- Previous_Scores
+>- Tutoring_Sessions
+>- Physical_Activity
+
+> Categorical:
+>- The dataset also contains categorical variables related to factors such as parental involvement, education level, access to resources, motivation, teacher quality, and other student characteristics.
+
+#### Exploratory data analysis & data preparation
+
+> The project started with an Exploratory Data Analysis (EDA) to understand:
+
+- Data distributions
+- Missing values
+- Numerical and categorical variables
+- Potential outliers
+- Relationships between variables and Exam_Score
+
+> A total of 229 observations (3.47%) were removed.
+
+> After preprocessing: 6,377 observations remained.
 
 #### Models metrics result comparison table
 
@@ -85,7 +125,6 @@ In progress [developing]
     </tr>
   </tbody>
 </table>
-
 <br>
 
 > Attention! <strong>↓ Lower is better &nbsp; | &nbsp; ↑ Higher is better</strong>
