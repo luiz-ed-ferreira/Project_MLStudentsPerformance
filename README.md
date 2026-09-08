@@ -21,7 +21,99 @@ In progress [developing]
 
 ### Results
 
-xxxx
+#### Models metrics result comparison table
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>MAE ↓</th>
+      <th>RMSE ↓</th>
+      <th>R² ↑</th>
+      <th>Adjusted R² ↑</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Linear regression</strong></td>
+      <td>0.48</td>
+      <td><strong>2.04</strong></td>
+      <td><strong>0.734</strong></td>
+      <td><strong>0.730</strong></td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>Decision tree</td>
+      <td>1.83</td>
+      <td>3.54</td>
+      <td>0.199</td>
+      <td>0.187</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>Tuned decision tree</td>
+      <td>1.55</td>
+      <td>2.69</td>
+      <td>0.539</td>
+      <td>0.532</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td><strong>GA + Linear regression</strong></td>
+      <td>~0.48</td>
+      <td>~2.04</td>
+      <td>~0.734</td>
+      <td>~0.728</td>
+      <td><strong>28</strong></td>
+    </tr>
+    <tr>
+      <td>Neural network</td>
+      <td>0.85</td>
+      <td>2.20</td>
+      <td>0.691</td>
+      <td>0.686</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td><strong>Tuned neural network</strong></td>
+      <td><strong>0.46</strong></td>
+      <td>2.05</td>
+      <td>0.732</td>
+      <td>0.728</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+> Attention! <strong>↓ Lower is better &nbsp; | &nbsp; ↑ Higher is better</strong>
+
+#### Key takeaways
+
+##### Best MAE: Tuned Neural Network — 0.46
+
+> The tuned neural network achieved the lowest average absolute prediction error.
+
+##### Best RMSE & R²: Linear Regression — RMSE 2.04 / R² 0.734
+
+> Despite being the simplest model, Linear Regression achieved the strongest overall performance across these metrics.
+
+##### Best feature reduction: Genetic Algorithm — 40 -> 28 features
+
+> The GA reduced the feature space by 30% while maintaining virtually the same predictive performance.
+
+##### Best hyperparameter tuning: Decision Tree
+
+> Hyperparameter tuning substantially improved the Decision Tree, but it remained less competitive than the other approaches.
+
+#### Models conclusion
+
+> One of the most interesting findings of this project was that greater model complexity did not necessarily lead to better predictive performance.
+> Linear Regression provided an extremely strong baseline, while the tuned Neural Network achieved a slightly better MAE but similar overall performance.
+> At the same time, the Genetic Algorithm demonstrated that the model could maintain comparable performance using 30% fewer features.
+> Therefore, model selection should not rely exclusively on predictive accuracy. Performance, complexity, interpretability, and feature efficiency should all be considered when choosing a final model.
 
 ### Prerequisites & used softwares
 
