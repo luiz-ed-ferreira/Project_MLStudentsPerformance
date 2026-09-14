@@ -17,7 +17,7 @@ In progress [developing]
 - [x] Neural network model studies
 - [ ] TBD
 
-> Attention! Consult the Project_structure.txt file for more information on the project pipeline.
+> Attention! Consult the docs/Project_structure.txt file for more information on the project pipeline.
 
 ### Model analyses
 

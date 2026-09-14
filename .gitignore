@@ -2,7 +2,4 @@
 .venv_students/
 
 #Datasets
-Dataset/
-
-#Other
-#TBD
+data/
