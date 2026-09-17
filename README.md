@@ -1,4 +1,4 @@
-# Project students performance - Kaggle dataset
+# Project Students Performance - Kaggle Dataset
 
 ### Project overview
 
