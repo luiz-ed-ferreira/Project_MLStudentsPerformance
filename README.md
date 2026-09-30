@@ -154,6 +154,188 @@ In progress [developing]
 > At the same time, the Genetic Algorithm demonstrated that the model could maintain comparable performance using 30% fewer features.
 > Therefore, model selection should not rely exclusively on predictive accuracy. Performance, complexity, interpretability, and feature efficiency should all be considered when choosing a final model.
 
+### Project evolution & architecture
+
+> The next stage of this project focuses on transforming the Machine Learning experiments into an **end-to-end prediction application**.
+
+> The goal is to allow users to enter student information through a **Streamlit interface**, run the trained Machine Learning models, and compare their predictions alongside the evaluation metrics obtained during model testing.
+
+> The project will later evolve toward an API-based and containerized architecture using **FastAPI, Docker, Apache Airflow, and AWS**.
+
+#### 🏗️ Planned Architecture
+
+```text
+                         ┌──────────────────┐
+                         │       User       │
+                         └────────┬─────────┘
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │    Streamlit     │
+                         │    Frontend      │
+                         └────────┬─────────┘
+                                  │
+                             REST API
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │     FastAPI      │
+                         │   ML Backend     │
+                         └────────┬─────────┘
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+       Linear Models        Decision Trees      Neural Networks
+              │                   │                   │
+              └───────────────────┼───────────────────┘
+                                  │
+                                  ▼
+                         Prediction Results
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │    Streamlit     │
+                         │ Results Dashboard│
+                         └──────────────────┘
+```
+
+#### Development roadmap
+
+| Stage | Technology / Concept | Objective |
+|---|---|---|
+| 1 | Input Schema | Define and validate the student features required for prediction |
+| 2 | Model Serialization | Save trained models and preprocessing pipelines for inference |
+| 3 | Prediction Layer | Create a common function to execute all trained models |
+| 4 | Streamlit | Build an interactive interface for student data input and prediction comparison |
+| 5 | FastAPI | Expose the Machine Learning models through REST API endpoints |
+| 6 | Docker | Containerize the application and its services |
+| 7 | Apache Airflow | Orchestrate model training, evaluation, and retraining workflows |
+| 8 | AWS | Deploy the application and ML services to cloud infrastructure |
+
+---
+
+#### Model input
+
+> The prediction system receives **19 student features**.
+
+> The target variable `Exam_Score` is not provided by the user, as it represents the value predicted by the Machine Learning models.
+
+##### Numerical features
+
+| Feature | Minimum | Maximum | Default |
+|---|---:|---:|---:|
+| `Hours_Studied` | 1 | 48 | 20 |
+| `Attendance` | 60 | 100 | 80 |
+| `Sleep_Hours` | 4 | 10 | 7 |
+| `Previous_Scores` | 50 | 100 | 75 |
+| `Tutoring_Sessions` | 0 | 8 | 1 |
+| `Physical_Activity` | 0 | 6 | 3 |
+
+##### Categorical features
+
+| Feature | Accepted Values |
+|---|---|
+| `Parental_Involvement` | low, medium, high |
+| `Access_to_Resources` | low, medium, high |
+| `Extracurricular_Activities` | no, yes |
+| `Motivation_Level` | low, medium, high |
+| `Internet_Access` | no, yes |
+| `Family_Income` | low, medium, high |
+| `Teacher_Quality` | low, medium, high |
+| `School_Type` | private, public |
+| `Peer_Influence` | negative, neutral, positive |
+| `Learning_Disabilities` | no, yes |
+| `Parental_Education_Level` | high school, college, postgraduate |
+| `Distance_from_Home` | near, moderate, far |
+| `Gender` | female, male |
+
+---
+
+#### Prediction workflow
+
+> The user inputs student information only once. The same observation is then processed by the trained models.
+
+```text
+Student Information
+        │
+        ▼
+Input Validation
+        │
+        ▼
+DataFrame
+        │
+        ▼
+Preprocessing
+        │
+        ├──► Linear Regression
+        ├──► Decision Tree
+        ├──► Tuned Decision Tree
+        ├──► GA + Linear Regression
+        ├──► Neural Network
+        └──► Tuned Neural Network
+                    │
+                    ▼
+             Model Predictions
+                    │
+                    ▼
+             Results Comparison
+```
+
+> The application will compare predictions from all models while also displaying their previously calculated test-set performance metrics:
+
+- **MAE** — Mean Absolute Error
+- **RMSE** — Root Mean Squared Error
+- **R²** — Coefficient of Determination
+- **Adjusted R²** — Adjusted Coefficient of Determination
+
+> Performance metrics represent the models' historical performance on the test dataset and are not calculated from a single new user observation.
+
+---
+
+### Planned project structure
+
+```text
+Project_MLStudentsPerformance/
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── docs/
+│   └── Models_project_structure.txt
+│
+├── models/
+│   ├── baseline.pkl
+│   ├── decision_tree.pkl
+│   ├── tuned_decision_tree.pkl
+│   ├── genetic_algorithm_linear_regression.pkl
+│   ├── neural_network.pkl
+│   └── tuned_neural_network.pkl
+│
+├── models_notebooks/
+│   ├── baseline.ipynb
+│   ├── decision_tree.ipynb
+│   ├── genetic_algorithm.ipynb
+│   └── neural_network.ipynb
+│
+├── notebooks/
+│   ├── casual_inference.ipynb
+│   └── main_analyses.ipynb
+│
+├── src/
+│   ├── input_schema.py
+│   ├── preprocessing.py
+│   ├── model_loader.py
+│   ├── prediction.py
+│   └── config.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+> This architecture separates **data processing, model inference, user interface, and infrastructure**, making the project easier to maintain and allowing each component to evolve independently.
+
 ### Prerequisites & used softwares
 
 - WSL Linux/Ubuntu for Windows 11 System
