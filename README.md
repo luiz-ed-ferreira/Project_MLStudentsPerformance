@@ -15,7 +15,22 @@ In progress [developing]
 - [x] Decision tree model studies
 - [x] Genetic algoritm model studies
 - [x] Neural network model studies
-- [ ] TBD
+- [ ] Define and validate the model input schema
+- [ ] Review and serialize all trained ML models
+- [ ] Implement centralized model loading
+- [ ] Build a unified prediction layer for all models
+- [ ] Handle the genetic algorithm feature selection pipeline
+- [ ] Test the complete inference workflow
+- [ ] Build the interactive Streamlit interface
+- [ ] Create a model prediction and metrics dashboard
+- [ ] Develop a REST API using FastAPI
+- [ ] Connect Streamlit to the FastAPI backend
+- [ ] Containerize the application with Docker
+- [ ] Configure multi-container orchestration with Docker Compose
+- [ ] Implement ML workflow orchestration with Apache Airflow
+- [ ] Add automated tests and input validation
+- [ ] Deploy the application and services on AWS
+- [ ] Complete production documentation and architecture diagrams
 
 > Attention! Consult the docs/Project_structure.txt file for more information on the project pipeline.
 
@@ -319,7 +334,7 @@ Project_MLStudentsPerformance/
 │   └── neural_network.ipynb
 │
 ├── notebooks/
-│   ├── casual_inference.ipynb
+│   ├── causal_inference.ipynb
 │   └── main_analyses.ipynb
 │
 ├── src/
@@ -340,6 +355,10 @@ Project_MLStudentsPerformance/
 
 - WSL Linux/Ubuntu for Windows 11 System
 - Python version 3.12.3
+- Streamlit 1.64.0
+- FastAPI 0.142.2
+- Docker 4.93.0
+- Apache Airflow 3.3.2
 
 > Attention! Consult the requirements.txt file for more information about python libraries used.
 
