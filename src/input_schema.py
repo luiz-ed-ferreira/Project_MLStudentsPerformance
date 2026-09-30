@@ -177,7 +177,7 @@ def validate_input(student_data: dict[str, Any]) -> None:
             )
 
 #----------------------------------------------------------
-#Notes:
+#Notes
 #----------------------------------------------------------
 
 #Streamlit input schema features/variables
