@@ -32,8 +32,6 @@ In progress [developing]
 - [ ] Deploy the application and services on AWS
 - [ ] Complete production documentation and architecture diagrams
 
-> Attention! Consult the docs/Project_structure.txt file for more information on the project pipeline.
-
 ### Model analyses
 
 #### Objective
