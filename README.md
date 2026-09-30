@@ -175,7 +175,7 @@ In progress [developing]
 
 > The project will later evolve toward an API-based and containerized architecture using **FastAPI, Docker, Apache Airflow, and AWS**.
 
-#### 🏗️ Planned Architecture
+#### Planned Architecture
 
 ```text
                          ┌──────────────────┐
