@@ -42,7 +42,3 @@
  o Final model decision (best forecast)
 
 ------------------------------------------------------------------------
-
- ## Project Airflow Structure
-
- o TBD
