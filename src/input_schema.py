@@ -2,9 +2,8 @@
 from typing import Any
 
 #----------------------------------------------------------
-#Features definition
-#----------------------------------------------------------
 
+#Features definition
 #Stores the rules for the 6 numerical variables
 NUMERICAL_FEATURES: dict[str, dict[str, int]] = {
     "Hours_Studied": {
@@ -177,43 +176,42 @@ def validate_input(student_data: dict[str, Any]) -> None:
             )
 
 #----------------------------------------------------------
-#Notes
-#----------------------------------------------------------
 
-#Streamlit input schema features/variables
+#Notes:
+    #Streamlit input schema features/variables
 
-#Call libraries
-#import pandas as pd
+    #Call libraries
+    #import pandas as pd
 
-#Transformed dataset (from EDA)
-#Students performance factors for model dataset
-#student_performance_factors_for_model = pd.read_csv('data/student_performance_factors_for_model.csv')
+    #Transformed dataset (from EDA)
+    #Students performance factors for model dataset
+    #student_performance_factors_for_model = pd.read_csv('data/student_performance_factors_for_model.csv')
 
-#Without Exam_Score
-#X = student_performance_factors_for_model.drop(columns=['Exam_Score'])
+    #Without Exam_Score
+    #X = student_performance_factors_for_model.drop(columns=['Exam_Score'])
 
-#Columns type identification
-#Categorical collumns
-#categorical_columns = X.select_dtypes(
-#    include=["object", "string"]
-#).columns.tolist() #-> 14
+    #Columns type identification
+    #Categorical collumns
+    #categorical_columns = X.select_dtypes(
+    #    include=["object", "string"]
+    #).columns.tolist() #-> 14
 
-#for column in categorical_columns:
-#    print(f"\n{column}")
-#    print(sorted(X[column].dropna().unique()))
+    #for column in categorical_columns:
+    #    print(f"\n{column}")
+    #    print(sorted(X[column].dropna().unique()))
 
-#Numerical collumns
-#numerical_input_columns = [
-#    "Hours_Studied",
-#    "Attendance",
-#    "Sleep_Hours",
-#    "Previous_Scores",
-#    "Tutoring_Sessions",
-#    "Physical_Activity"
-#]
+    #Numerical collumns
+    #numerical_input_columns = [
+    #    "Hours_Studied",
+    #    "Attendance",
+    #    "Sleep_Hours",
+    #    "Previous_Scores",
+    #    "Tutoring_Sessions",
+    #    "Physical_Activity"
+    #]
 
-#print(
-#    X[numerical_input_columns]
-#    .agg(["min", "max", "median"])
-#    .T
-#)
+    #print(
+    #    X[numerical_input_columns]
+    #    .agg(["min", "max", "median"])
+    #    .T
+    #)

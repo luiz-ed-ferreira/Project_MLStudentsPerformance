@@ -2,6 +2,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
+#----------------------------------------------------------
+
 #Transformed dataset (from EDA)
 #Students performance factors for model dataset
 student_performance_factors_for_model = pd.read_csv('../data/student_performance_factors_for_model.csv')
@@ -20,5 +22,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     test_size=0.2,
     random_state=42
 )
-#Summary: random_state=42 does not improve the model. It merely ensures that the randomness is reproducible.
+#Summary: random_state=42 does not improve the model. It merely ensures that the randomness is reproducible
 #For other definitions 42 is "life, the universe, and everything else
+
+#----------------------------------------------------------

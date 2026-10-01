@@ -2,6 +2,10 @@
 from pathlib import Path
 from typing import Any
 import joblib
+import sys
+sys.path.append("../")
+
+#----------------------------------------------------------
 
 #Create a constant variable to store the path to the models directory and a dictionary to map model names to their corresponding file names
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -17,7 +21,9 @@ MODEL_FILES: dict[str, str] = {
     "tuned_neural_network": "tuned_neural_network.pkl",
 }
 
-#Function to load a serialized machine learning model from the models directory based on the provided model name. It raises a ValueError if the model name is not registered and a FileNotFoundError if the model file does not exist.
+#----------------------------------------------------------
+
+#Function to load a serialized machine learning model from the models directory based on the provided model name. It raises a ValueError if the model name is not registered and a FileNotFoundError if the model file does not exist
 def load_model(model_name: str) -> Any:
     """
         Load a serialized machine learning model
@@ -48,7 +54,9 @@ def load_model(model_name: str) -> Any:
 
     return joblib.load(model_path)
 
-#Function to load all registered machine learning models from the models directory and return them as a dictionary where the keys are the model names and the values are the loaded models.
+#----------------------------------------------------------
+
+#Function to load all registered machine learning models from the models directory and return them as a dictionary where the keys are the model names and the values are the loaded models
 def load_models() -> dict[str, Any]:
     """
         Load all registered machine learning models
@@ -61,3 +69,5 @@ def load_models() -> dict[str, Any]:
         model_name: load_model(model_name)
         for model_name in MODEL_FILES
     }
+
+#----------------------------------------------------------
