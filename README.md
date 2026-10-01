@@ -17,9 +17,9 @@ In progress [developing]
 - [x] Neural network model studies
 - [x] Define and validate the model input schema
 - [x] Review and serialize all trained ML models
-- [ ] Implement centralized model loading
-- [ ] Build a unified prediction layer for all models
-- [ ] Handle the genetic algorithm feature selection pipeline
+- [x] Implement centralized model loading
+- [x] Build a unified prediction layer for all models
+- [x] Handle the genetic algorithm feature selection pipeline
 - [ ] Test the complete inference workflow
 - [ ] Build the interactive Streamlit interface
 - [ ] Create a model prediction and metrics dashboard
