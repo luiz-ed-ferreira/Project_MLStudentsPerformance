@@ -336,11 +336,12 @@ Project_MLStudentsPerformance/
 │   └── main_analyses.ipynb
 │
 ├── src/
+│   ├── config.py
 │   ├── input_schema.py
-│   ├── preprocessing.py
 │   ├── model_loader.py
 │   ├── prediction.py
-│   └── config.py
+|   ├── preprocessing.py  
+│   └── training_test_variables_80_20.py
 │
 ├── requirements.txt
 ├── README.md
