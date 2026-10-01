@@ -20,9 +20,9 @@ In progress [developing]
 - [x] Implement centralized model loading
 - [x] Build a unified prediction layer for all models
 - [x] Handle the genetic algorithm feature selection pipeline
-- [ ] Test the complete inference workflow
-- [ ] Build the interactive Streamlit interface
-- [ ] Create a model prediction and metrics dashboard
+- [x] Test the complete inference workflow
+- [x] Build the interactive Streamlit interface
+- [x] Create a model prediction and metrics dashboard
 - [ ] Develop a REST API using FastAPI
 - [ ] Connect Streamlit to the FastAPI backend
 - [ ] Containerize the application with Docker
@@ -310,6 +310,9 @@ Preprocessing
 
 ```text
 Project_MLStudentsPerformance/
+│
+├── api/
+│   └── main.py
 │
 ├── app/
 │   └── streamlit_app.py
