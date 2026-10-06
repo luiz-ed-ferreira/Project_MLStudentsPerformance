@@ -8,7 +8,7 @@ from typing import Any
 NUMERICAL_FEATURES: dict[str, dict[str, int]] = {
     "Hours_Studied": {
         "min": 1,
-        "max": 44,
+        "max": 48,
         "default": 20,
     },
     "Attendance": {
