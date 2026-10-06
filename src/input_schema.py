@@ -1,9 +1,11 @@
-#Call librarie
+#Call libraries
 from typing import Any
-
+from typing import Any, Literal
+from pydantic import BaseModel, Field
 #----------------------------------------------------------
 
 #Features definition
+
 #Stores the rules for the 6 numerical variables
 NUMERICAL_FEATURES: dict[str, dict[str, int]] = {
     "Hours_Studied": {
@@ -174,6 +176,34 @@ def validate_input(student_data: dict[str, Any]) -> None:
             raise ValueError(
                 f"{feature} must be one of {allowed_values}."
             )
+
+#----------------------------------------------------------
+
+#Input schema for student performance prediction API
+class StudentInput(BaseModel):
+    Hours_Studied: int = Field(ge=1, le=48)
+    Attendance: int = Field(ge=60, le=100)
+    Parental_Involvement: Literal["low", "medium", "high"]
+    Access_to_Resources: Literal["low", "medium", "high"]
+    Extracurricular_Activities: Literal["no", "yes"]
+    Sleep_Hours: int = Field(ge=4, le=10)
+    Previous_Scores: int = Field(ge=50, le=100)
+    Motivation_Level: Literal["low", "medium", "high"]
+    Internet_Access: Literal["no", "yes"]
+    Tutoring_Sessions: int = Field(ge=0, le=8)
+    Family_Income: Literal["low", "medium", "high"]
+    Teacher_Quality: Literal["low", "medium", "high"]
+    School_Type: Literal["private", "public"]
+    Peer_Influence: Literal["negative", "neutral", "positive"]
+    Physical_Activity: int = Field(ge=0, le=6)
+    Learning_Disabilities: Literal["no", "yes"]
+    Parental_Education_Level: Literal[
+        "high school",
+        "college",
+        "postgraduate",
+    ]
+    Distance_from_Home: Literal["near", "moderate", "far"]
+    Gender: Literal["female", "male"]
 
 #----------------------------------------------------------
 
