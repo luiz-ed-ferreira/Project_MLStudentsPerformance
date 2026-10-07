@@ -1,15 +1,23 @@
+#Initializers
+    #->uvicorn api.main:app --reload
+    #->streamlit run app/streamlit_app.py
+
 #Call libraries
 import sys
 from pathlib import Path
-import streamlit as st
+import streamlit as st 
 import pandas as pd
+import requests
 
+#Attention -> Streamlit should no longer directly access ML layer more
 #Call prediction function from src/prediction.py (definition of root folder to import src folder)
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+#PROJECT_ROOT = Path(__file__).resolve().parent.parent
+#if str(PROJECT_ROOT) not in sys.path:
+#    sys.path.insert(0, str(PROJECT_ROOT))
+#from src.prediction import predict_all_models 
 
-from src.prediction import predict_all_models
+#API URL for the FastAPI backend
+API_URL = "http://127.0.0.1:8000" 
 
 #----------------------------------------------------------
 
@@ -215,7 +223,18 @@ if st.button(
     }
 
     try:
-        predictions = predict_all_models(student_data)
+        #Attention -> Streamlit should no longer directly access ML layer more
+        #predictions = predict_all_models(student_data)
+        #Response from FastAPI backend
+        response = requests.post(
+            f"{API_URL}/predict",
+            json=student_data,
+            timeout=30,
+        )
+        response.raise_for_status()
+        result = response.json()
+        predictions = result["predictions"]
+           
         st.success("Predictions generated successfully.")
         st.subheader("📊 Model Predictions")
 
@@ -231,9 +250,25 @@ if st.button(
                     value=f"{prediction:.2f}",
                 )
 
+    except requests.exceptions.ConnectionError:
+        st.error(
+            "Could not connect to the prediction API. "
+            "Please make sure the FastAPI service is running."
+        )
+
+    except requests.exceptions.Timeout:
+        st.error(
+            "The prediction API took too long to respond."
+        )
+
+    except requests.exceptions.RequestException as error:
+        st.error(
+            f"API request failed: {error}"
+        )
+
     except Exception as error:
         st.error(
-            f"Prediction failed: {error}"
+            f"Unexpected error: {error}"
         )
 
 #----------------------------------------------------------
