@@ -45,8 +45,10 @@
 
 ## Build commands (docker)
 
-docker build \
-  -f docker/api.Dockerfile \
-  -t student-performance-api .
+---Image
+docker build -f docker/api.Dockerfile -t student-performance-api .
+
+--Container
+docker run --name student-performance-api -p 8000:8000 student-performance-api
 
 ------------------------------------------------------------------------

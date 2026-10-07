@@ -25,8 +25,8 @@ In progress [developing]
 - [x] Create a model prediction and metrics dashboard
 - [x] Develop a REST API using FastAPI
 - [x] Connect Streamlit to the FastAPI backend
-- [ ] Containerize the application with Docker
-- [ ] Configure multi-container orchestration with Docker Compose
+- [x] Containerize the application with Docker
+- [x] Configure multi-container orchestration with Docker Compose
 - [ ] Implement ML workflow orchestration with Apache Airflow
 - [ ] Add automated tests and input validation
 - [ ] Deploy the application and services on AWS
@@ -316,7 +316,12 @@ Project_MLStudentsPerformance/
 │   └── main.py
 │
 ├── app/
+│   ├── test_prediction.py
 │   └── streamlit_app.py
+│
+├── docker/
+│   ├── api.Dockerfile
+│   └── streamlit.Dockerfile
 │
 ├── docs/
 │   └── Models_project_structure.txt
@@ -349,6 +354,7 @@ Project_MLStudentsPerformance/
 │
 ├── requirements.txt
 ├── README.md
+├── .dockerignore
 └── .gitignore
 ```
 
