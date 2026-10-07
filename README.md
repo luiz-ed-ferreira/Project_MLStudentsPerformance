@@ -350,7 +350,12 @@ Project_MLStudentsPerformance/
 │   ├── model_loader.py
 │   ├── prediction.py
 |   ├── preprocessing.py  
-│   └── training_test_variables_80_20.py
+│   ├── training_test_variables_80_20.py
+│   └── training/
+│       ├── __init__.py
+│       ├── data_loader.py
+│       ├── train.py
+│       └── evaluation.py
 │
 ├── requirements.txt
 ├── README.md
