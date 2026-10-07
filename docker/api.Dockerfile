@@ -34,4 +34,3 @@ CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
     #main     -> main.py module
     #app      -> FastAPI application object
     #0.0.0.0  -> Allows the API to receive connections from outside the container
-
