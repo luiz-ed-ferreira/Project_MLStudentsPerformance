@@ -1,6 +1,13 @@
-#Attention! This file is used for testing the prediction function. It is not part of the main application code.
+#Attention -> This file is used for testing the prediction function. It is not part of the main application code.
+
+#Call libraries
+import sys
+sys.path.append("../")
 from src.prediction import predict_all_models
 
+#----------------------------------------------------------
+
+#JSON input data for testing the prediction function
 student_data = {
     "Hours_Studied": 20,
     "Attendance": 80,
@@ -23,14 +30,16 @@ student_data = {
     "Gender": "male",
 }
 
+#----------------------------------------------------------
 
+#Result of the prediction function
 predictions = predict_all_models(student_data)
-
 print("\nStudent Performance Predictions")
 print("=" * 40)
-
 for model_name, prediction in predictions.items():
     print(
         f"{model_name:<30} "
         f"{prediction:.2f}"
     )
+
+#----------------------------------------------------------

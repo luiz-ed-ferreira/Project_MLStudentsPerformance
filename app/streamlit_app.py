@@ -3,7 +3,6 @@
     #->streamlit run app/streamlit_app.py
 
 #Call libraries
-import sys
 from pathlib import Path
 import streamlit as st 
 import pandas as pd
