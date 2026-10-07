@@ -1,7 +1,15 @@
+#Git commits
+.git
+.github
+
 #Environment
 .venv_students/
 .venv/
 venv/
+
+#Notebooks
+notebooks/
+models_notebooks/
 
 #Datasets
 data/
@@ -12,20 +20,7 @@ data/
 
 #Python
 __pycache__/
-*.py[cod]
-
+*.pyc
 
 #Jupyter
 .ipynb_checkpoints/
-
-#IDE
-.vscode/
-.idea/
-
-#OS
-.DS_Store
-Thumbs.db
-
-#Logs
-*.log
-logs/

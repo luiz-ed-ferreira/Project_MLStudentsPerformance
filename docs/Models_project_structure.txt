@@ -42,3 +42,11 @@
  o Final model decision (best forecast)
 
 ------------------------------------------------------------------------
+
+## Build commands (docker)
+
+docker build \
+  -f docker/api.Dockerfile \
+  -t student-performance-api .
+
+------------------------------------------------------------------------
