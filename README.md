@@ -355,6 +355,7 @@ Project_MLStudentsPerformance/
 ├── requirements.txt
 ├── README.md
 ├── .dockerignore
+├── docker-compose.yml 
 └── .gitignore
 ```
 

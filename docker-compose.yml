@@ -1,0 +1,71 @@
+#Services
+#│
+#├── api
+#│   └── FastAPI
+#│
+#└── streamlit
+#    └── Frontend
+
+#Defines all services (containers) that compose the application
+services:
+  #FastAPI backend service
+  #Responsible for receiving requests and generating ML predictions
+  api:
+
+    #Defines how the Docker image for the API should be built
+    build:
+
+      #Sets the project root as the Docker build context
+      #This allows the Dockerfile to access folders such as:
+        #api/, src/, models/, and requirements.txt
+      context: .
+
+      #Specifies which Dockerfile should be used to build the API image
+      dockerfile: docker/api.Dockerfile
+
+    #Defines a fixed and readable name for the API container
+    container_name: student-performance-api
+
+    #Maps a host port to a container port
+    #Format:
+      #HOST_PORT:CONTAINER_PORT
+    #This makes the FastAPI service accessible from the host machine at:
+      #http://localhost:8000
+    ports:
+      - "8000:8000"
+
+  #Streamlit frontend service
+  #Responsible for the user interface and sending prediction requests to the FastAPI backend
+  streamlit:
+
+    build:
+
+      #Uses the project root as the Docker build context
+      context: .
+
+      #Specifies the Dockerfile used to build the Streamlit image
+      dockerfile: docker/streamlit.Dockerfile
+
+    #Defines a fixed and readable name for the Streamlit container
+    container_name: student-performance-streamlit
+
+    #Maps port 8501 from the host machine to port 8501 inside the Streamlit container
+    #This makes the application accessible at:
+      #http://localhost:8501
+    ports:
+      - "8501:8501"
+
+    #Defines environment variables available inside the Streamlit container
+    environment:
+
+      #Defines the address used by Streamlit to communicate with the FastAPI service 
+      #api is the Docker Compose service name
+      #Docker Compose automatically provides internal DNS resolution, allowing containers to communicate using service names
+      API_URL: http://api:8000
+
+    #Defines a startup dependency between services
+    #Docker Compose starts the API service before starting Streamlit
+    #Important:
+      #This controls startup order but does not guarantee that the API is already fully ready to receive requests
+    depends_on:
+      - api

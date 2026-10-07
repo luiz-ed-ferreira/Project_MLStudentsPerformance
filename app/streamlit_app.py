@@ -7,6 +7,7 @@ from pathlib import Path
 import streamlit as st 
 import pandas as pd
 import requests
+import os
 
 #Attention -> Streamlit should no longer directly access ML layer more
     #Call prediction function from src/prediction.py (definition of root folder to import src folder)
@@ -15,8 +16,14 @@ import requests
     #    sys.path.insert(0, str(PROJECT_ROOT))
     #from src.prediction import predict_all_models 
 
-#API URL for the FastAPI backend
-API_URL = "http://127.0.0.1:8000" 
+#API URL for the FastAPI backend (API)
+    #API_URL = "http://127.0.0.1:8000" 
+
+#Create environment variable for API URL (docker)
+API_URL = os.getenv(
+    "API_URL",
+    "http://127.0.0.1:8000",
+)
 
 #----------------------------------------------------------
 

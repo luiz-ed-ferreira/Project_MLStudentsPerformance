@@ -1,13 +1,13 @@
-#Uses Python 3.12 as the base image
+#Uses the official Python 3.12 slim image as the base image
 FROM python:3.12-slim
 
 #Defines the working directory inside the container
 WORKDIR /app
 
-#Copies the dependency file
+#Copies the project dependencies
 COPY requirements.txt .
 
-#Installs the project dependencies.
+#Installs the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 #Copies the Streamlit application
@@ -16,5 +16,5 @@ COPY app/ ./app/
 #Documents the port used by Streamlit
 EXPOSE 8501
 
-#Starts the Streamlit application.
+#Starts the Streamlit application
 CMD ["streamlit", "run", "app/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]
