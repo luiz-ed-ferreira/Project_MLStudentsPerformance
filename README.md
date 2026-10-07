@@ -23,8 +23,8 @@ In progress [developing]
 - [x] Test the complete inference workflow
 - [x] Build the interactive Streamlit interface
 - [x] Create a model prediction and metrics dashboard
-- [ ] Develop a REST API using FastAPI
-- [ ] Connect Streamlit to the FastAPI backend
+- [x] Develop a REST API using FastAPI
+- [x] Connect Streamlit to the FastAPI backend
 - [ ] Containerize the application with Docker
 - [ ] Configure multi-container orchestration with Docker Compose
 - [ ] Implement ML workflow orchestration with Apache Airflow
