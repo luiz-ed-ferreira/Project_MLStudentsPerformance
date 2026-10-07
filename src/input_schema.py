@@ -2,10 +2,10 @@
 from typing import Any
 from typing import Any, Literal
 from pydantic import BaseModel, Field
+
 #----------------------------------------------------------
 
 #Features definition
-
 #Stores the rules for the 6 numerical variables
 NUMERICAL_FEATURES: dict[str, dict[str, int]] = {
     "Hours_Studied": {
@@ -245,3 +245,5 @@ class StudentInput(BaseModel):
     #    .agg(["min", "max", "median"])
     #    .T
     #)
+
+#----------------------------------------------------------
