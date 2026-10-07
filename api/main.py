@@ -1,3 +1,6 @@
+#Initializers (bash)
+    #->uvicorn api.main:app --reload
+
 #Call libraries
 from fastapi import FastAPI
 import sys
@@ -7,7 +10,7 @@ from src.input_schema import StudentInput
 from src.prediction import predict_all_models
 
 #----------------------------------------------------------
-#/docs - swagger
+#/docs - swagger (test)
 
 #Copyright message
 app = FastAPI(
