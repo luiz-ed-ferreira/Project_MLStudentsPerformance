@@ -353,6 +353,7 @@ Project_MLStudentsPerformance/
 │   ├── training_test_variables_80_20.py
 │   └── training/
 │       ├── __init__.py
+│       ├── artifacts.py
 │       ├── data_loader.py
 │       ├── train.py
 │       └── evaluation.py
