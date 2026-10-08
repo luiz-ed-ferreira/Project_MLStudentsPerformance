@@ -381,3 +381,5 @@ if st.button(
         st.caption(
             "Higher R² and Adjusted R² values indicate better model fit."
         )
+
+#----------------------------------------------------------

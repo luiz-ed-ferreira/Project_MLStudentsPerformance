@@ -1,6 +1,6 @@
 #Call libraries
-from typing import Any
 import pandas as pd
+from typing import Any
 from src.input_schema import INPUT_FEATURES, validate_input
 from src.model_loader import load_models
 

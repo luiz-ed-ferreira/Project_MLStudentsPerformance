@@ -2,7 +2,6 @@
     #->uvicorn api.main:app --reload
 
 #Call libraries
-from fastapi import FastAPI
 import sys
 sys.path.append("../")
 from fastapi import FastAPI, HTTPException
@@ -56,3 +55,5 @@ def predict(student: StudentInput) -> dict:
             status_code=500,
             detail=str(error),
         ) from error
+
+#----------------------------------------------------------

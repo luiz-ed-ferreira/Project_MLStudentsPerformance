@@ -1,4 +1,4 @@
-#Attention -> This file is used for testing the prediction function. It is not part of the main application code.
+#Attention -> This file is used for testing the prediction function. It is not part of the main application code
 
 #Call libraries
 import sys

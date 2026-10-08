@@ -37,3 +37,5 @@ def evaluate_regression(model, X_test: pd.DataFrame, y_test: pd.Series) -> dict[
         "R2": float(r2),
         "Adjusted_R2": float(adjusted_r2),
     }
+
+#----------------------------------------------------------
