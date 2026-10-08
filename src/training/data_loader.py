@@ -5,8 +5,10 @@ from src.config import DATA_DIR, TARGET
 
 #----------------------------------------------------------
 
+#Function to load datasets
 def load_dataset(filename: str) -> pd.DataFrame:
     """ Load a dataset from the configured data directory. """
+
     file_path = DATA_DIR / filename
 
     if not file_path.exists():
@@ -18,8 +20,10 @@ def load_dataset(filename: str) -> pd.DataFrame:
 
 #----------------------------------------------------------
 
+#Function to separate the independent variables from the target variable.
 def split_features_target(dataframe: pd.DataFrame,) -> tuple[pd.DataFrame, pd.Series]:
     """ Separate input features from the target variable. """
+
     if TARGET not in dataframe.columns:
         raise ValueError(
             f"Target column '{TARGET}' not found."
