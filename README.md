@@ -27,8 +27,8 @@ In progress [developing]
 - [x] Connect Streamlit to the FastAPI backend
 - [x] Containerize the application with Docker
 - [x] Configure multi-container orchestration with Docker Compose
-- [ ] Implement ML workflow orchestration with Apache Airflow
-- [ ] Add automated tests and input validation
+- [x] Implement ML workflow orchestration with Apache Airflow
+- [x] Add automated tests and input validation
 - [ ] Deploy the application and services on AWS
 - [ ] Complete production documentation and architecture diagrams
 
