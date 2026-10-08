@@ -358,6 +358,10 @@ Project_MLStudentsPerformance/
 │       ├── train.py
 │       └── evaluation.py
 │
+├── training_outputs/
+│   ├── baseline.pkl
+│   └── baseline_metrics.json
+│
 ├── requirements.txt
 ├── README.md
 ├── .dockerignore
