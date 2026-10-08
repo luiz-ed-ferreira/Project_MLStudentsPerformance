@@ -1,5 +1,4 @@
 #Call libraries
-from pathlib import Path
 import pandas as pd
 from src.config import DATA_DIR, TARGET
 
