@@ -25,7 +25,7 @@ TRAINING_OUTPUT_DIR = PROJECT_ROOT / "training_outputs"
 TARGET = "Exam_Score"
 
 #Name of the original dataset
-DATASET_FILENAME = "StudentPerformanceFactors.csv"
+DATASET_FILENAME = "../data/student_performance_factors_for_model.csv"
 
 #----------------------------------------------------------
 #Machine learning configuration
