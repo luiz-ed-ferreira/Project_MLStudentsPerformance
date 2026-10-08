@@ -5,6 +5,7 @@ venv/
 
 #Datasets
 data/
+training_outputs/
 
 #Environment variables (opt)
 .env
