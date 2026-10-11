@@ -30,4 +30,10 @@ def baseline_training_pipeline():
     @task
     def train_baseline_model():
         """ Execute the complete baseline ML training pipeline. """
-        #Imports the training entry
+        from src.training.run_training import run_baseline_training
+
+        run_baseline_training()
+
+    train_baseline_model()
+
+baseline_training_pipeline()
