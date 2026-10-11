@@ -1,6 +1,12 @@
 #Call libraries
+import os
+import subprocess
+import sys
 from datetime import datetime
 from airflow.sdk import dag, task #Imports the DAG and Task decorators from Apache Airflow 3
+
+#Airflow path to the ML project directory
+ML_PROJECT_DIR = "/opt/airflow/ml_project"
 
 #Defines a DAG using the TaskFlow API
 #A DAG (Directed Acyclic Graph) represents a workflow composed of tasks and their execution dependencies
@@ -23,17 +29,26 @@ from airflow.sdk import dag, task #Imports the DAG and Task decorators from Apac
     tags=["machine-learning", "training"],
 )
 def baseline_training_pipeline():
-    """ Define the workflow for training the baseline Student Performance regression model. """
+    """ Orchestrate baseline model training. """
 
     #Converts this Python function into an Airflow task
-    #Airflow manages its execution, state, logs, and retries
     @task
     def train_baseline_model():
-        """ Execute the complete baseline ML training pipeline. """
-        from src.training.run_training import run_baseline_training
+        """ Run the ML training pipeline in an isolated process. """
 
-        run_baseline_training()
+        environment = os.environ.copy()
+        environment["PYTHONPATH"] = ML_PROJECT_DIR
 
+        subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "src.training.run_training",
+            ],
+            cwd=ML_PROJECT_DIR,
+            env=environment,
+            check=True,
+        )
     train_baseline_model()
 
 baseline_training_pipeline()
