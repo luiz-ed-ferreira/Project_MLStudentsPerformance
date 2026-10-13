@@ -353,6 +353,9 @@ Project_MLStudentsPerformance/
 ├── docs/
 │   └── Models_project_structure.txt
 │
+├── img/
+│   └── streamlit-aws.png
+│
 ├── models/
 │   ├── baseline.pkl
 │   ├── decision_tree.pkl
@@ -372,16 +375,18 @@ Project_MLStudentsPerformance/
 │   └── main_analyses.ipynb
 │
 ├── src/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── input_schema.py
 │   ├── model_loader.py
 │   ├── prediction.py
 |   ├── preprocessing.py  
-│   ├── training_test_variables_80_20.py
+│   ├── training_test_variables.py
 │   └── training/
 │       ├── __init__.py
 │       ├── artifacts.py
 │       ├── data_loader.py
+│       ├── run_training.py
 │       ├── train.py
 │       └── evaluation.py
 │
