@@ -407,6 +407,7 @@ Project_MLStudentsPerformance/
 - FastAPI 0.142.2
 - Docker 4.93.0
 - Apache Airflow 3.3.2
+- AWS EC2
 
 > Attention! Consult the requirements.txt file for more information about python libraries used.
 
