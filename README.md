@@ -6,7 +6,7 @@
 
 ### Status & improvements
 
-In progress [developing]
+Completed
 
 - [x] Project structure definition
 - [x] Dataset EDA
@@ -29,8 +29,8 @@ In progress [developing]
 - [x] Configure multi-container orchestration with Docker Compose
 - [x] Implement ML baseline workflow orchestration with Apache Airflow
 - [x] Add automated tests and input validation
-- [ ] Deploy the application and services on AWS
-- [ ] Complete production documentation and architecture diagrams
+- [x] Deploy the application and services on AWS
+- [x] Complete production documentation and architecture diagrams
 
 ### Model analyses
 
@@ -305,6 +305,30 @@ Preprocessing
 > Performance metrics represent the models' historical performance on the test dataset and are not calculated from a single new user observation.
 
 ---
+
+### AWS Deployment
+
+The Student Performance ML application was successfully deployed
+and validated on an Amazon EC2 instance running Ubuntu Server.
+
+The deployment uses Docker Compose to orchestrate two services:
+
+- **Streamlit:** Interactive interface for student performance predictions.
+- **FastAPI:** REST API responsible for loading and executing six
+  trained machine learning models.
+
+The application was tested end-to-end on AWS, successfully generating
+predictions from all six models through the Streamlit interface.
+
+Apache Airflow was implemented separately as a proof of concept
+for automated baseline model training. The AWS deployment focuses
+on model inference.
+
+**Deployment status:** Successfully tested on AWS EC2.
+The demonstration instance is not maintained as a permanently
+available public service.
+
+![alt text](img/streamlit-aws.png)
 
 ### Planned project structure
 
