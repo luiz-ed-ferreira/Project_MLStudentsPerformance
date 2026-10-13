@@ -3,6 +3,9 @@
 .venv/
 venv/
 
+#AWS
+aws/
+
 #Datasets
 data/
 training_outputs/
