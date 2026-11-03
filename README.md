@@ -399,7 +399,7 @@ Project_MLStudentsPerformance/
 
 > This architecture separates **data processing, model inference, user interface, and infrastructure**, making the project easier to maintain and allowing each component to evolve independently.
 
-### Prerequisites & used softwares
+### Prerequisites & Softwares
 
 - WSL Linux/Ubuntu for Windows 11 System
 - Python version 3.12.3
