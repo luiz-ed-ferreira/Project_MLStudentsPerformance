@@ -1,10 +1,10 @@
 # Project Students Performance - Kaggle Dataset
 
-### Project overview
+### Project Overview
 
 > A machine learning project developed to explore and compare different predictive approaches, including Regression, Decision Trees, Neural Networks, and Genetic Algorithms. Based on a fictional dataset of high school student performance, the project involved data analysis, model development, and performance comparison to identify the most suitable approach for predicting student outcomes. This project was developed using Python and machine learning techniques.
 
-### Status & improvements
+### Status & Improvements
 
 Completed
 
@@ -32,7 +32,7 @@ Completed
 - [x] Deploy the application and services on AWS
 - [x] Complete production documentation and architecture diagrams
 
-### Model analyses
+### Model Analyses
 
 #### Objective
 
@@ -60,7 +60,7 @@ Completed
 > Categorical:
 >- The dataset also contains categorical variables related to factors such as parental involvement, education level, access to resources, motivation, teacher quality, and other student characteristics.
 
-#### Exploratory data analysis & data preparation
+#### EDA & Data Preparation
 
 > The project started with an Exploratory Data Analysis (EDA) to understand:
 
@@ -74,7 +74,7 @@ Completed
 
 > After preprocessing: 6,377 observations remained.
 
-#### Models metrics result comparison table
+#### Models Metrics Result Comparison Table
 
 <table>
   <thead>
@@ -142,32 +142,32 @@ Completed
 
 > Attention! <strong>↓ Lower is better &nbsp; | &nbsp; ↑ Higher is better</strong>
 
-#### Key takeaways
+#### Key Takeaways
 
-##### Best MAE: Tuned Neural Network — 0.46
+##### Best MAE: Tuned Neural Network - 0.46
 
 > The tuned neural network achieved the lowest average absolute prediction error.
 
-##### Best RMSE & R²: Linear Regression — RMSE 2.04 / R² 0.734
+##### Best RMSE & R²: Linear Regression - RMSE 2.04 / R² 0.734
 
 > Despite being the simplest model, Linear Regression achieved the strongest overall performance across these metrics.
 
-##### Best feature reduction: Genetic Algorithm — 40 -> 28 features
+##### Best Feature Reduction: Genetic Algorithm - 40 -> 28 Features
 
 > The GA reduced the feature space by 30% while maintaining virtually the same predictive performance.
 
-##### Best hyperparameter tuning: Decision Tree
+##### Best Hyperparameter Tuning: Decision Tree
 
 > Hyperparameter tuning substantially improved the Decision Tree, but it remained less competitive than the other approaches.
 
-#### Models conclusion
+#### Models Conclusion
 
 > One of the most interesting findings of this project was that greater model complexity did not necessarily lead to better predictive performance.
 > Linear Regression provided an extremely strong baseline, while the tuned Neural Network achieved a slightly better MAE but similar overall performance.
 > At the same time, the Genetic Algorithm demonstrated that the model could maintain comparable performance using 30% fewer features.
 > Therefore, model selection should not rely exclusively on predictive accuracy. Performance, complexity, interpretability, and feature efficiency should all be considered when choosing a final model.
 
-### Project evolution & architecture
+### Project Evolution & Architecture
 
 > The next stage of this project focuses on transforming the Machine Learning experiments into an **end-to-end prediction application**.
 
@@ -175,7 +175,7 @@ Completed
 
 > The project will later evolve toward an API-based and containerized architecture using **FastAPI, Docker, Apache Airflow, and AWS**.
 
-#### Planned architecture
+#### Planned Architecture
 
 ```text
                          ┌──────────────────┐
@@ -213,7 +213,7 @@ Completed
                          └──────────────────┘
 ```
 
-#### Development roadmap
+#### Development Roadmap
 
 | Stage | Technology / Concept | Objective |
 |---|---|---|
@@ -228,13 +228,13 @@ Completed
 
 ---
 
-#### Model input
+#### Model Input
 
 > The prediction system receives **19 student features**.
 
 > The target variable `Exam_Score` is not provided by the user, as it represents the value predicted by the Machine Learning models.
 
-##### Numerical features
+##### Numerical Features
 
 | Feature | Minimum | Maximum | Default |
 |---|---:|---:|---:|
@@ -245,7 +245,7 @@ Completed
 | `Tutoring_Sessions` | 0 | 8 | 1 |
 | `Physical_Activity` | 0 | 6 | 3 |
 
-##### Categorical features
+##### Categorical Features
 
 | Feature | Accepted Values |
 |---|---|
@@ -265,7 +265,7 @@ Completed
 
 ---
 
-#### Prediction workflow
+#### Prediction Workflow
 
 > The user inputs student information only once. The same observation is then processed by the trained models.
 
@@ -330,7 +330,7 @@ available public service.
 
 ![alt text](img/streamlit-aws.png)
 
-### Planned project structure
+### Project Architecture
 
 ```text
 Project_MLStudentsPerformance/
