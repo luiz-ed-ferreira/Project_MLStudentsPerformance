@@ -307,7 +307,7 @@ Preprocessing
 - **Adjusted R²** — Adjusted Coefficient of Determination
 
 <p align="center">
-  <img src="img/students_performance.jpg" alt="Student Performance">
+  <img src="img/students_performance.jpg" alt="Student Performance" height="200" weight="300">
 </p>
 
 > Performance metrics represent the models' historical performance on the test dataset and are not calculated from a single new user observation.
