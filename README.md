@@ -3,7 +3,7 @@
 ### Project Overview
 
 <p align="center">
-  <img src="img/student_icon.png" alt="Student Icon">
+  <img src="img/student_icon.png" alt="Student Icon" height="200" weight="300">
 </p>
 
 > A machine learning project developed to explore and compare different predictive approaches, including Regression, Decision Trees, Neural Networks, and Genetic Algorithms. Based on a fictional dataset of high school student performance, the project involved data analysis, model development, and performance comparison to identify the most suitable approach for predicting student outcomes. This project was developed using Python and machine learning techniques.
@@ -307,7 +307,7 @@ Preprocessing
 - **Adjusted R²** — Adjusted Coefficient of Determination
 
 <p align="center">
-  <img src="img/students_performance.jpg" alt="Student Performance" height="200" weight="300">
+  <img src="img/students_performance.jpg" alt="Student Performance">
 </p>
 
 > Performance metrics represent the models' historical performance on the test dataset and are not calculated from a single new user observation.
